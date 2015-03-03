@@ -30,7 +30,7 @@ def choose_pivot(numbers, l, h)
 	l + rand(h - l)
 end
 
-numbers = File.foreach("test.txt").to_a.map { |e| e.to_i }
+numbers = File.foreach(ARGV[0]).to_a.map { |e| e.to_i }
 
 puts quicksort(numbers, 0, numbers.count - 1)
 
